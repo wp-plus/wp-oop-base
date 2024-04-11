@@ -3,7 +3,7 @@
         'name' => 'wp-plus/wp-oop-base',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'afd4e5930945b1f947921ffe27fcafda5d7d488f',
+        'reference' => 'a89a901f8a4c04a14b6efb96f6e5d5d4adbc6767',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(
@@ -24,7 +24,7 @@
         'wp-plus/wp-oop-base' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'afd4e5930945b1f947921ffe27fcafda5d7d488f',
+            'reference' => 'a89a901f8a4c04a14b6efb96f6e5d5d4adbc6767',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(

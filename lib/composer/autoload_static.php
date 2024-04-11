@@ -22,6 +22,14 @@ class ComposerStaticInit6551e1500547f2625b1607f45e096353
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'WpPlus\\WpOopBase\\Custom\\PostType\\AbstractCustomPostType' => __DIR__ . '/../..' . '/src/Custom/PostType/AbstractCustomPostType.php',
+        'WpPlus\\WpOopBase\\Custom\\Taxonomy\\AbstractCustomTaxonomy' => __DIR__ . '/../..' . '/src/Custom/Taxonomy/AbstractCustomTaxonomy.php',
+        'WpPlus\\WpOopBase\\Hook\\AbstractActivationHook' => __DIR__ . '/../..' . '/src/Hook/AbstractActivationHook.php',
+        'WpPlus\\WpOopBase\\Hook\\AbstractHook' => __DIR__ . '/../..' . '/src/Hook/AbstractHook.php',
+        'WpPlus\\WpOopBase\\Hook\\HooksContainerTrait' => __DIR__ . '/../..' . '/src/Hook/HooksContainerTrait.php',
+        'WpPlus\\WpOopBase\\Plugin\\AbstractExtensiblePlugin' => __DIR__ . '/../..' . '/src/Plugin/AbstractExtensiblePlugin.php',
+        'WpPlus\\WpOopBase\\Plugin\\AbstractPlugin' => __DIR__ . '/../..' . '/src/Plugin/AbstractPlugin.php',
+        'WpPlus\\WpOopBase\\Plugin\\PluginsContainerTrait' => __DIR__ . '/../..' . '/src/Plugin/PluginsContainerTrait.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
