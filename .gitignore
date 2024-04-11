@@ -1,0 +1,4 @@
+/.idea/
+
+# Composer dev dependencies
+/lib/php-stubs/

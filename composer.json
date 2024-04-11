@@ -1,0 +1,31 @@
+{
+    "name": "wp-plus/wp-oop-base",
+    "description": "Opinionated OOP base for WordPress plugin and theme development.",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "config": {
+        "vendor-dir": "lib/"
+    },
+    "autoload": {
+        "psr-4": {
+            "WpPlus\\WpOopBase\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Zoli Szabó",
+            "email": "zoli.szabo+github@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "php-stubs/wordpress-stubs": "^6.4"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    }
+}
