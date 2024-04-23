@@ -3,8 +3,9 @@
 namespace WpPlus\WpOopBase\Hook;
 
 use Closure;
+use WpPlus\WpOopBase\Common\Registrable\AbstractRegistrable;
 
-abstract class AbstractHook
+abstract class AbstractHook extends AbstractRegistrable
 {
     abstract public function getName(): string;
 
@@ -27,44 +28,45 @@ abstract class AbstractHook
     /**
      * This is the actual hook callable, that will be executed, when the hook is run.
      */
-    abstract protected function callback(...$args);
+    abstract protected function callback(...$args): mixed;
 
     private Closure|null $finalCallback = null;
 
     /**
      * Method to be called to add the hook (action or filter).
      */
-    public function register()
+    public function register(): static
     {
-        $this->finalCallback = function(...$args) {
+        $this->finalCallback = function(...$args): mixed {
             return $this->callback(...$args);
         };
 
         // add_action() is just an alias for add_filter(), so we are safe registering
         // both types of hooks with add_filter().
-        return add_filter(
+        add_filter(
             $this->getName(),
             $this->finalCallback,
             $this->getPriority(),
             $this->getNumberOfAcceptedArgs()
         );
+
+        return $this;
     }
 
     /**
      * Method to be called to remove the hook (action or filter).
      */
-    public function unregister()
+    public function unregister(): static
     {
-        if (!$this->finalCallback) {
-            return FALSE;
+        if (!is_null($this->finalCallback)) {
+            remove_filter(
+                $this->getName(),
+                $this->finalCallback,
+                $this->getPriority(),
+            );
+            $this->finalCallback = null;
         }
-        $return = remove_filter(
-            $this->getName(),
-            $this->finalCallback,
-            $this->getPriority(),
-            $this->getNumberOfAcceptedArgs()
-        );
-        $this->finalCallback = null;
-        return $return;
+
+        return $this;
     }
 }

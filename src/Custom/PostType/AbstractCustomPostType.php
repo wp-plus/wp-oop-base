@@ -2,7 +2,13 @@
 
 namespace WpPlus\WpOopBase\Custom\PostType;
 
-abstract class AbstractCustomPostType
+use UnexpectedValueException;
+use WpPlus\WpOopBase\Common\Registrable\AbstractRegistrable;
+
+/**
+ * @api
+ */
+abstract class AbstractCustomPostType extends AbstractRegistrable
 {
     /**
      * Key of the custom post type.
@@ -15,15 +21,26 @@ abstract class AbstractCustomPostType
      */
     abstract protected function getConfig(): array;
 
-    public function register(): void
+    public function register(): static
     {
         add_action('init', function() {
-            if (empty(static::getPostType())) {
-                throw new \UnexpectedValueException(get_class($this) . ': Post type must not be empty!', 1518363774);
-            }
+            $this->assertValidPostType();
             register_post_type(static::getPostType(), $this->getConfig());
         }, 0);
+        return $this;
+    }
+
+    public function unregister(): static
+    {
+        $this->assertValidPostType();
+        unregister_post_type(static::getPostType());
+        return $this;
+    }
+
+    private function assertValidPostType(): void
+    {
+        if (empty(static::getPostType())) {
+            throw new UnexpectedValueException(get_class($this) . ': Post type must not be empty!', 1518363774);
+        }
     }
 }
-
-/* EOF */

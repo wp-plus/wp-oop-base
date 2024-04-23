@@ -10,10 +10,23 @@ trait PluginsContainerTrait
      */
     private array $plugins = [];
 
-    public function addPlugin(AbstractPlugin $plugin): static
+    public function addPlugin(AbstractPlugin|string $plugin): static
     {
-        $this->plugins[] = $plugin;
+        if (is_string($plugin)) {
+            $this->plugins[] = $plugin::getInstance();
+        }
+        elseif ($plugin instanceof AbstractPlugin) {
+            $this->plugins[] = $plugin;
+        }
         return $this;
+    }
+
+    /**
+     * @return AbstractPlugin[]
+     */
+    public function getPlugins(): array
+    {
+        return $this->plugins;
     }
 
     protected final function runPlugins(): void

@@ -4,7 +4,7 @@ namespace WpPlus\WpOopBase\Hook;
 
 abstract class AbstractActivationHook extends AbstractHook
 {
-    private ?string $mainPluginFile = null;
+    private ?string $mainPluginFile;
 
     public function __construct(string $mainPluginFile)
     {
@@ -14,6 +14,6 @@ abstract class AbstractActivationHook extends AbstractHook
     public function getName(): string
     {
         $file = plugin_basename($this->mainPluginFile);
-        return sprintf('activate_', $file);
+        return 'activate_' . $file;
     }
 }

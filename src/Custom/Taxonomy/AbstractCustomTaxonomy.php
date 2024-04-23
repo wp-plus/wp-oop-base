@@ -2,7 +2,10 @@
 
 namespace WpPlus\WpOopBase\Custom\Taxonomy;
 
-abstract class AbstractCustomTaxonomy
+use UnexpectedValueException;
+use WpPlus\WpOopBase\Common\Registrable\AbstractRegistrable;
+
+abstract class AbstractCustomTaxonomy extends AbstractRegistrable
 {
     /**
      * Key of the custom taxonomy.
@@ -22,12 +25,10 @@ abstract class AbstractCustomTaxonomy
      */
     abstract protected function getConfig(): array;
 
-    public function register(): void
+    public function register(): static
     {
         add_action('init', function() {
-            if (empty(static::getTaxonomy())) {
-                throw new \UnexpectedValueException(get_class($this) . ': Taxonomy must not be empty!', 1544694369);
-            }
+            $this->assertValidTaxonomy();
 
             // https://codex.wordpress.org/Function_Reference/register_taxonomy#Usage
             register_taxonomy(static::getTaxonomy(), $this->getObjectTypes(), $this->getConfig());
@@ -36,11 +37,26 @@ abstract class AbstractCustomTaxonomy
             // Use register_taxonomy_for_object_type() right after the function to interconnect them.
             // Else you could run into minetraps where the post type isn't attached inside filter callback
             // that run during parse_request or pre_get_posts.
-            foreach($this->getObjectTypes() as $object_type) {
-                register_taxonomy_for_object_type(static::getTaxonomy(), $object_type);
+            foreach($this->getObjectTypes() as $objectType) {
+                register_taxonomy_for_object_type(static::getTaxonomy(), $objectType);
             }
         }, 0);
+        return $this;
+    }
+
+    public function unregister(): static
+    {
+        foreach($this->getObjectTypes() as $objectType) {
+            unregister_taxonomy_for_object_type(static::getTaxonomy(), $objectType);
+        }
+        unregister_taxonomy(static::getTaxonomy());
+        return $this;
+    }
+
+    private function assertValidTaxonomy(): void
+    {
+        if (empty(static::getTaxonomy())) {
+            throw new UnexpectedValueException(get_class($this) . ': Taxonomy must not be empty!', 1544694369);
+        }
     }
 }
-
-/* EOF */

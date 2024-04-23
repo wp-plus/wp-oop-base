@@ -21,11 +21,11 @@
         "php": "^8.0"
     },
     "require-dev": {
-        "php-stubs/wordpress-stubs": "^6.4"
+        "php-stubs/wordpress-stubs": "^6.5"
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "1.x-dev"
+            "dev-main": "2.x-dev"
         }
     }
 }

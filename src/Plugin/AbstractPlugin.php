@@ -2,37 +2,35 @@
 
 namespace WpPlus\WpOopBase\Plugin;
 
-use WpPlus\WpOopBase\Hook\HooksContainerTrait;
+use WpPlus\WpOopBase\Common\Runnable\AbstractRunnable;
 
 /**
  * Abstract class to be used as base for plugin classes.
  */
-abstract class AbstractPlugin
+abstract class AbstractPlugin extends AbstractRunnable
 {
-    use HooksContainerTrait;
-
     /**
      * Private constructor just to disable multiple instantiation.
      * Since there is no way to add arguments to subclass' constructor, dependencies should be set via setters.
      */
-    private function __construct() {}
+    protected function __construct() {}
 
     /**
      * The implementation of this method in the final sub-classes should contain the filters
      * & action hooks and any other initializations the final plugin may need.
      */
-    abstract protected function setup(): void;
+    abstract protected function main(): void;
 
     /**
      * @staticvar AbstractPlugin $instance
      */
     public static function getInstance(): static
     {
-        static $instance = NULL;
-        if (NULL === $instance) {
-            $instance = new static();
+        static $instances = [];
+        if (!array_key_exists(static::class, $instances)) {
+            $instances[static::class] = new static();
         }
-        return $instance;
+        return $instances[static::class];
     }
 
     /**
@@ -40,7 +38,6 @@ abstract class AbstractPlugin
      */
     public function run(): void
     {
-        $this->setup();
-        $this->registerHooks();
+        $this->main();
     }
 }

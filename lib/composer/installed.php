@@ -3,7 +3,7 @@
         'name' => 'wp-plus/wp-oop-base',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'a89a901f8a4c04a14b6efb96f6e5d5d4adbc6767',
+        'reference' => '673a74505367bc6cea46426e32d1c6d89a33b7cd',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(
@@ -13,9 +13,9 @@
     ),
     'versions' => array(
         'php-stubs/wordpress-stubs' => array(
-            'pretty_version' => 'v6.4.3',
-            'version' => '6.4.3.0',
-            'reference' => '6105bdab2f26c0204fe90ecc53d5684754550e8f',
+            'pretty_version' => 'v6.5.2',
+            'version' => '6.5.2.0',
+            'reference' => '379f17a90c01498d4c99a0d15aab6e7aa6a2c840',
             'type' => 'library',
             'install_path' => __DIR__ . '/../php-stubs/wordpress-stubs',
             'aliases' => array(),
@@ -24,7 +24,7 @@
         'wp-plus/wp-oop-base' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'a89a901f8a4c04a14b6efb96f6e5d5d4adbc6767',
+            'reference' => '673a74505367bc6cea46426e32d1c6d89a33b7cd',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(
