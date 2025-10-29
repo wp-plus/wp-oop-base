@@ -14,16 +14,22 @@ namespace WpPlus\WpOopBase;
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
-	die;
+    die;
 }
 
-// Since this bootstrap file can be either in the "mu-plugins" folder or the regular "plugins", make sure we run it
-// only once. Normally, this file should be moved from the regular "plugins/wp-oop-base" folder to the "mu-plugins" folder
-// right after installation (when it is desired to have it as a "must use" plugin), it can happen that this files gets
-// copied (so duplicated).
+// If you want to have this as a must-use plugin, simply copy or move this file from the regular "plugins/wp-oop-base"
+// folder to the "mu-plugins" folder. Everything else can (should) stay in the "plugins" folder, especially when using
+// Composer for dependency management.
+// Since this bootstrap file can be present in both the "mu-plugins" and the regular "plugins" folder, make sure we run
+// it only once.
 if (defined('WP_PLUS_WP_OOP_BASE_IS_LOADED')) {
     return;
 }
 define('WP_PLUS_WP_OOP_BASE_IS_LOADED', TRUE);
 
-require_once __DIR__ . '/lib/autoload.php';
+// Ensure WP_PLUGIN_DIR is defined
+if (!defined('WP_PLUGIN_DIR')) {
+    define('WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins');
+}
+
+require_once WP_PLUGIN_DIR . '/wp-oop-base/lib/autoload.php';
