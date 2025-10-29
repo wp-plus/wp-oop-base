@@ -12,11 +12,12 @@ class DateTime
     }
 
     /**
+     * @deprecated Use wp_date() directly instead.
      * @api
      */
     static function offsetAwareFormat($time, $format = 'Y-m-d H:i:s'): string
     {
-        return date_i18n($format, $time + (get_option('gmt_offset') * HOUR_IN_SECONDS));
+        return wp_date($format, $time);
     }
 
     /**
@@ -40,12 +41,18 @@ class DateTime
     static function format(int $timestamp, string $type, int|bool $gmt = 0): int|string
     {
         return match ($type) {
-            'mysql' => ($gmt) ? gmdate('Y-m-d H:i:s', $timestamp) : gmdate(
-                'Y-m-d H:i:s',
-                ($timestamp + (get_option('gmt_offset') * HOUR_IN_SECONDS))
+            'mysql' => ($gmt)
+                ? gmdate('Y-m-d H:i:s', $timestamp)
+                : gmdate('Y-m-d H:i:s', ($timestamp + (get_option('gmt_offset') * HOUR_IN_SECONDS))
             ),
-            'timestamp' => ($gmt) ? $timestamp : $timestamp + (get_option('gmt_offset') * HOUR_IN_SECONDS),
-            default => ($gmt) ? date($type, $timestamp) : date($type, $timestamp + (get_option('gmt_offset') * HOUR_IN_SECONDS)),
+            'timestamp' =>
+                ($gmt)
+                    ? $timestamp
+                    : $timestamp + (get_option('gmt_offset') * HOUR_IN_SECONDS),
+            default =>
+                ($gmt)
+                    ? date($type, $timestamp)
+                    : date($type, $timestamp + (get_option('gmt_offset') * HOUR_IN_SECONDS)),
         };
     }
 }
