@@ -3,7 +3,7 @@
 namespace WpPlus\WpOopBase\Hook;
 
 use Closure;
-use WpPlus\WpOopBase\Common\Registrable\AbstractRegistrable;
+use WpPlus\WpOopBase\Registrable\AbstractRegistrable;
 
 abstract class AbstractHook extends AbstractRegistrable
 {

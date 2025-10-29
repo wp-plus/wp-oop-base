@@ -1,8 +1,8 @@
 <?php
 
-namespace WpPlus\WpOopBase\Common\Registrable;
+namespace WpPlus\WpOopBase\Registrable;
 
-use WpPlus\WpOopBase\Common\AllowStaticMethodCallsTrait;
+use WpPlus\WpOopBase\Support\AllowStaticMethodCallsTrait;
 
 /**
  * @method static static registerInstance()

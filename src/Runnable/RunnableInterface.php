@@ -1,6 +1,6 @@
 <?php
 
-namespace WpPlus\WpOopBase\Common\Runnable;
+namespace WpPlus\WpOopBase\Runnable;
 
 interface RunnableInterface
 {

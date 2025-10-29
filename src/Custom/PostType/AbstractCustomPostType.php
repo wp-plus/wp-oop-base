@@ -3,7 +3,7 @@
 namespace WpPlus\WpOopBase\Custom\PostType;
 
 use UnexpectedValueException;
-use WpPlus\WpOopBase\Common\Registrable\AbstractRegistrable;
+use WpPlus\WpOopBase\Registrable\AbstractRegistrable;
 
 /**
  * @api

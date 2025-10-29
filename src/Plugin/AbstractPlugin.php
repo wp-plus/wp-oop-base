@@ -2,7 +2,7 @@
 
 namespace WpPlus\WpOopBase\Plugin;
 
-use WpPlus\WpOopBase\Common\Runnable\AbstractRunnable;
+use WpPlus\WpOopBase\Runnable\AbstractRunnable;
 
 /**
  * Abstract class to be used as base for plugin classes.

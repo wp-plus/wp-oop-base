@@ -2,7 +2,7 @@
 
 namespace WpPlus\WpOopBase\Hook;
 
-use WpPlus\WpOopBase\Common\Registrable\AbstractRegistrable;
+use WpPlus\WpOopBase\Registrable\AbstractRegistrable;
 
 abstract class AbstractMultiHook extends AbstractRegistrable
 {

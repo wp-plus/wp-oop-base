@@ -3,7 +3,7 @@
 namespace WpPlus\WpOopBase\Custom\Taxonomy;
 
 use UnexpectedValueException;
-use WpPlus\WpOopBase\Common\Registrable\AbstractRegistrable;
+use WpPlus\WpOopBase\Registrable\AbstractRegistrable;
 
 abstract class AbstractCustomTaxonomy extends AbstractRegistrable
 {
@@ -35,7 +35,7 @@ abstract class AbstractCustomTaxonomy extends AbstractRegistrable
 
             // Better be safe than sorry when registering custom taxonomies for custom post types.
             // Use register_taxonomy_for_object_type() right after the function to interconnect them.
-            // Else you could run into minetraps where the post type isn't attached inside filter callback
+            // Else you could run into "mine traps" where the post type isn't attached inside filter callback
             // that run during parse_request or pre_get_posts.
             foreach($this->getObjectTypes() as $objectType) {
                 register_taxonomy_for_object_type(static::getTaxonomy(), $objectType);

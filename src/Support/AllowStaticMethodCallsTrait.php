@@ -1,6 +1,6 @@
 <?php
 
-namespace WpPlus\WpOopBase\Common;
+namespace WpPlus\WpOopBase\Support;
 
 use BadMethodCallException;
 

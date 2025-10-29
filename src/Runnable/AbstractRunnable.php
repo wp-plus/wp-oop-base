@@ -1,8 +1,8 @@
 <?php
 
-namespace WpPlus\WpOopBase\Common\Runnable;
+namespace WpPlus\WpOopBase\Runnable;
 
-use WpPlus\WpOopBase\Common\AllowStaticMethodCallsTrait;
+use WpPlus\WpOopBase\Support\AllowStaticMethodCallsTrait;
 
 /**
  * @method static static runInstance()

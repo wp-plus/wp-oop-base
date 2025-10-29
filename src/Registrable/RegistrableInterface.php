@@ -1,6 +1,6 @@
 <?php
 
-namespace WpPlus\WpOopBase\Common\Registrable;
+namespace WpPlus\WpOopBase\Registrable;
 
 /**
  * @internal
