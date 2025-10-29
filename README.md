@@ -244,6 +244,23 @@ $post = Post::getPostBySlug('my-post-slug', 'product');
 $id = Post::getPostIdBySlug('my-post-slug', 'product');
 ```
 
+### Database Access Trait
+Convenient access to the WordPress database object:
+
+```php
+use WpPlus\WpOopBase\Support\WpDbTrait;
+
+class MyClass
+{
+    use WpDbTrait;
+
+    public function getSomething(): array
+    {
+        return $this->wpdb()->get_results("SELECT * FROM ...");
+    }
+}
+```
+
 ## Advanced Usage
 
 ### Extensible Plugins
