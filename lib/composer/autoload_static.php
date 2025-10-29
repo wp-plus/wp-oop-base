@@ -22,11 +22,6 @@ class ComposerStaticInit6551e1500547f2625b1607f45e096353
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'WpPlus\\WpOopBase\\Common\\AllowStaticMethodCallsTrait' => __DIR__ . '/../..' . '/src/Common/AllowStaticMethodCallsTrait.php',
-        'WpPlus\\WpOopBase\\Common\\Registrable\\AbstractRegistrable' => __DIR__ . '/../..' . '/src/Common/Registrable/AbstractRegistrable.php',
-        'WpPlus\\WpOopBase\\Common\\Registrable\\RegistrableInterface' => __DIR__ . '/../..' . '/src/Common/Registrable/RegistrableInterface.php',
-        'WpPlus\\WpOopBase\\Common\\Runnable\\AbstractRunnable' => __DIR__ . '/../..' . '/src/Common/Runnable/AbstractRunnable.php',
-        'WpPlus\\WpOopBase\\Common\\Runnable\\RunnableInterface' => __DIR__ . '/../..' . '/src/Common/Runnable/RunnableInterface.php',
         'WpPlus\\WpOopBase\\Custom\\PostType\\AbstractCustomPostType' => __DIR__ . '/../..' . '/src/Custom/PostType/AbstractCustomPostType.php',
         'WpPlus\\WpOopBase\\Custom\\Taxonomy\\AbstractCustomTaxonomy' => __DIR__ . '/../..' . '/src/Custom/Taxonomy/AbstractCustomTaxonomy.php',
         'WpPlus\\WpOopBase\\Helper\\DateTime' => __DIR__ . '/../..' . '/src/Helper/DateTime.php',
@@ -37,7 +32,13 @@ class ComposerStaticInit6551e1500547f2625b1607f45e096353
         'WpPlus\\WpOopBase\\Plugin\\AbstractExtensiblePlugin' => __DIR__ . '/../..' . '/src/Plugin/AbstractExtensiblePlugin.php',
         'WpPlus\\WpOopBase\\Plugin\\AbstractPlugin' => __DIR__ . '/../..' . '/src/Plugin/AbstractPlugin.php',
         'WpPlus\\WpOopBase\\Plugin\\PluginsContainerTrait' => __DIR__ . '/../..' . '/src/Plugin/PluginsContainerTrait.php',
+        'WpPlus\\WpOopBase\\Registrable\\AbstractRegistrable' => __DIR__ . '/../..' . '/src/Registrable/AbstractRegistrable.php',
+        'WpPlus\\WpOopBase\\Registrable\\RegistrableInterface' => __DIR__ . '/../..' . '/src/Registrable/RegistrableInterface.php',
+        'WpPlus\\WpOopBase\\Runnable\\AbstractRunnable' => __DIR__ . '/../..' . '/src/Runnable/AbstractRunnable.php',
+        'WpPlus\\WpOopBase\\Runnable\\RunnableInterface' => __DIR__ . '/../..' . '/src/Runnable/RunnableInterface.php',
         'WpPlus\\WpOopBase\\Shortcode\\AbstractShortcode' => __DIR__ . '/../..' . '/src/Shortcode/AbstractShortcode.php',
+        'WpPlus\\WpOopBase\\Support\\AllowStaticMethodCallsTrait' => __DIR__ . '/../..' . '/src/Support/AllowStaticMethodCallsTrait.php',
+        'WpPlus\\WpOopBase\\Support\\WpDbTrait' => __DIR__ . '/../..' . '/src/Support/WpDbTrait.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

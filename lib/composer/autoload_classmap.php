@@ -7,11 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'WpPlus\\WpOopBase\\Common\\AllowStaticMethodCallsTrait' => $baseDir . '/src/Common/AllowStaticMethodCallsTrait.php',
-    'WpPlus\\WpOopBase\\Common\\Registrable\\AbstractRegistrable' => $baseDir . '/src/Common/Registrable/AbstractRegistrable.php',
-    'WpPlus\\WpOopBase\\Common\\Registrable\\RegistrableInterface' => $baseDir . '/src/Common/Registrable/RegistrableInterface.php',
-    'WpPlus\\WpOopBase\\Common\\Runnable\\AbstractRunnable' => $baseDir . '/src/Common/Runnable/AbstractRunnable.php',
-    'WpPlus\\WpOopBase\\Common\\Runnable\\RunnableInterface' => $baseDir . '/src/Common/Runnable/RunnableInterface.php',
     'WpPlus\\WpOopBase\\Custom\\PostType\\AbstractCustomPostType' => $baseDir . '/src/Custom/PostType/AbstractCustomPostType.php',
     'WpPlus\\WpOopBase\\Custom\\Taxonomy\\AbstractCustomTaxonomy' => $baseDir . '/src/Custom/Taxonomy/AbstractCustomTaxonomy.php',
     'WpPlus\\WpOopBase\\Helper\\DateTime' => $baseDir . '/src/Helper/DateTime.php',
@@ -22,5 +17,11 @@ return array(
     'WpPlus\\WpOopBase\\Plugin\\AbstractExtensiblePlugin' => $baseDir . '/src/Plugin/AbstractExtensiblePlugin.php',
     'WpPlus\\WpOopBase\\Plugin\\AbstractPlugin' => $baseDir . '/src/Plugin/AbstractPlugin.php',
     'WpPlus\\WpOopBase\\Plugin\\PluginsContainerTrait' => $baseDir . '/src/Plugin/PluginsContainerTrait.php',
+    'WpPlus\\WpOopBase\\Registrable\\AbstractRegistrable' => $baseDir . '/src/Registrable/AbstractRegistrable.php',
+    'WpPlus\\WpOopBase\\Registrable\\RegistrableInterface' => $baseDir . '/src/Registrable/RegistrableInterface.php',
+    'WpPlus\\WpOopBase\\Runnable\\AbstractRunnable' => $baseDir . '/src/Runnable/AbstractRunnable.php',
+    'WpPlus\\WpOopBase\\Runnable\\RunnableInterface' => $baseDir . '/src/Runnable/RunnableInterface.php',
     'WpPlus\\WpOopBase\\Shortcode\\AbstractShortcode' => $baseDir . '/src/Shortcode/AbstractShortcode.php',
+    'WpPlus\\WpOopBase\\Support\\AllowStaticMethodCallsTrait' => $baseDir . '/src/Support/AllowStaticMethodCallsTrait.php',
+    'WpPlus\\WpOopBase\\Support\\WpDbTrait' => $baseDir . '/src/Support/WpDbTrait.php',
 );
