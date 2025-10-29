@@ -9,27 +9,31 @@
     "packages-dev": [
         {
             "name": "php-stubs/wordpress-stubs",
-            "version": "v6.5.2",
+            "version": "v6.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-stubs/wordpress-stubs.git",
-                "reference": "379f17a90c01498d4c99a0d15aab6e7aa6a2c840"
+                "reference": "abeb5a8b58fda7ac21f15ee596f302f2959a7114"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/379f17a90c01498d4c99a0d15aab6e7aa6a2c840",
-                "reference": "379f17a90c01498d4c99a0d15aab6e7aa6a2c840",
+                "url": "https://api.github.com/repos/php-stubs/wordpress-stubs/zipball/abeb5a8b58fda7ac21f15ee596f302f2959a7114",
+                "reference": "abeb5a8b58fda7ac21f15ee596f302f2959a7114",
                 "shasum": ""
+            },
+            "conflict": {
+                "phpdocumentor/reflection-docblock": "5.6.1"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-                "nikic/php-parser": "^4.13",
-                "php": "^7.4 || ~8.0.0",
+                "nikic/php-parser": "^5.5",
+                "php": "^7.4 || ^8.0",
                 "php-stubs/generator": "^0.8.3",
-                "phpdocumentor/reflection-docblock": "5.3",
-                "phpstan/phpstan": "^1.10.49",
+                "phpdocumentor/reflection-docblock": "^5.4.1",
+                "phpstan/phpstan": "^2.1",
                 "phpunit/phpunit": "^9.5",
-                "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^0.11"
+                "szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^1.1.1",
+                "wp-coding-standards/wpcs": "3.1.0 as 2.3.0"
             },
             "suggest": {
                 "paragonie/sodium_compat": "Pure PHP implementation of libsodium",
@@ -50,19 +54,19 @@
             ],
             "support": {
                 "issues": "https://github.com/php-stubs/wordpress-stubs/issues",
-                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.5.2"
+                "source": "https://github.com/php-stubs/wordpress-stubs/tree/v6.8.3"
             },
-            "time": "2024-04-14T17:30:14+00:00"
+            "time": "2025-09-30T20:58:47+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.0"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

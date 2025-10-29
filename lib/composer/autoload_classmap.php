@@ -14,6 +14,8 @@ return array(
     'WpPlus\\WpOopBase\\Common\\Runnable\\RunnableInterface' => $baseDir . '/src/Common/Runnable/RunnableInterface.php',
     'WpPlus\\WpOopBase\\Custom\\PostType\\AbstractCustomPostType' => $baseDir . '/src/Custom/PostType/AbstractCustomPostType.php',
     'WpPlus\\WpOopBase\\Custom\\Taxonomy\\AbstractCustomTaxonomy' => $baseDir . '/src/Custom/Taxonomy/AbstractCustomTaxonomy.php',
+    'WpPlus\\WpOopBase\\Helper\\DateTime' => $baseDir . '/src/Helper/DateTime.php',
+    'WpPlus\\WpOopBase\\Helper\\Post' => $baseDir . '/src/Helper/Post.php',
     'WpPlus\\WpOopBase\\Hook\\AbstractActivationHook' => $baseDir . '/src/Hook/AbstractActivationHook.php',
     'WpPlus\\WpOopBase\\Hook\\AbstractHook' => $baseDir . '/src/Hook/AbstractHook.php',
     'WpPlus\\WpOopBase\\Hook\\AbstractMultiHook' => $baseDir . '/src/Hook/AbstractMultiHook.php',

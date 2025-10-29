@@ -29,6 +29,8 @@ class ComposerStaticInit6551e1500547f2625b1607f45e096353
         'WpPlus\\WpOopBase\\Common\\Runnable\\RunnableInterface' => __DIR__ . '/../..' . '/src/Common/Runnable/RunnableInterface.php',
         'WpPlus\\WpOopBase\\Custom\\PostType\\AbstractCustomPostType' => __DIR__ . '/../..' . '/src/Custom/PostType/AbstractCustomPostType.php',
         'WpPlus\\WpOopBase\\Custom\\Taxonomy\\AbstractCustomTaxonomy' => __DIR__ . '/../..' . '/src/Custom/Taxonomy/AbstractCustomTaxonomy.php',
+        'WpPlus\\WpOopBase\\Helper\\DateTime' => __DIR__ . '/../..' . '/src/Helper/DateTime.php',
+        'WpPlus\\WpOopBase\\Helper\\Post' => __DIR__ . '/../..' . '/src/Helper/Post.php',
         'WpPlus\\WpOopBase\\Hook\\AbstractActivationHook' => __DIR__ . '/../..' . '/src/Hook/AbstractActivationHook.php',
         'WpPlus\\WpOopBase\\Hook\\AbstractHook' => __DIR__ . '/../..' . '/src/Hook/AbstractHook.php',
         'WpPlus\\WpOopBase\\Hook\\AbstractMultiHook' => __DIR__ . '/../..' . '/src/Hook/AbstractMultiHook.php',
