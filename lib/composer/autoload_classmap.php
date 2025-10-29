@@ -22,4 +22,5 @@ return array(
     'WpPlus\\WpOopBase\\Plugin\\AbstractExtensiblePlugin' => $baseDir . '/src/Plugin/AbstractExtensiblePlugin.php',
     'WpPlus\\WpOopBase\\Plugin\\AbstractPlugin' => $baseDir . '/src/Plugin/AbstractPlugin.php',
     'WpPlus\\WpOopBase\\Plugin\\PluginsContainerTrait' => $baseDir . '/src/Plugin/PluginsContainerTrait.php',
+    'WpPlus\\WpOopBase\\Shortcode\\AbstractShortcode' => $baseDir . '/src/Shortcode/AbstractShortcode.php',
 );

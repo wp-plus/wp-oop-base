@@ -37,6 +37,7 @@ class ComposerStaticInit6551e1500547f2625b1607f45e096353
         'WpPlus\\WpOopBase\\Plugin\\AbstractExtensiblePlugin' => __DIR__ . '/../..' . '/src/Plugin/AbstractExtensiblePlugin.php',
         'WpPlus\\WpOopBase\\Plugin\\AbstractPlugin' => __DIR__ . '/../..' . '/src/Plugin/AbstractPlugin.php',
         'WpPlus\\WpOopBase\\Plugin\\PluginsContainerTrait' => __DIR__ . '/../..' . '/src/Plugin/PluginsContainerTrait.php',
+        'WpPlus\\WpOopBase\\Shortcode\\AbstractShortcode' => __DIR__ . '/../..' . '/src/Shortcode/AbstractShortcode.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
