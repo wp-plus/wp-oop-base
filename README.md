@@ -32,8 +32,18 @@ composer require wp-plus/wp-oop-base
 ### Manual Installation
 
 1. Download the library
-2. Place it in your `wp-content/plugins/` directory
-3. Optionally, move `wp-oop-base.php` to `wp-content/mu-plugins/` for must-use plugin functionality
+2. Place it in your `wp-content/plugins/wp-oop-base/` directory
+3. Activate the plugin through the WordPress admin
+
+### Must-Use Plugin Installation
+
+For must-use plugin functionality (automatically loaded, before regular plugins):
+
+1. Follow the installation steps above
+2. Copy (or move) `wp-oop-base.php` to `wp-content/mu-plugins/`
+3. Keep all other files in `wp-content/plugins/wp-oop-base/`
+
+The bootstrap file will automatically detect the correct paths whether it's running as a regular plugin or must-use plugin.
 
 ## Quick Start
 
