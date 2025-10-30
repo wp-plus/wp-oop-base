@@ -29,18 +29,22 @@ WP OOP Base offers a collection of abstract classes and interfaces that promote 
 composer require wp-plus/wp-oop-base
 ```
 
+When installed via Composer, the library is automatically loaded through Composer's autoloader and doesn't need to be placed in the WordPress plugins directory. Simply include Composer's autoloader in your project and the classes will be available.
+
+Note: this will work only if Composer's autoloader is included - either manually or using a tool like [composer-autoload for WordPress](https://packagist.org/packages/wp-plus/composer-autoload).
+
 ### Manual Installation
 
 1. Download the library
 2. Place it in your `wp-content/plugins/wp-oop-base/` directory
 3. Activate the plugin through the WordPress admin
 
-### Must-Use Plugin Installation
+#### Must-Use Plugin Installation
 
 For must-use plugin functionality (automatically loaded, before regular plugins):
 
-1. Follow the installation steps above
-2. Copy (or move) `wp-oop-base.php` to `wp-content/mu-plugins/`
+1. Follow the manual installation steps above
+2. Move `wp-oop-base.php` to `wp-content/mu-plugins/`
 3. Keep all other files in `wp-content/plugins/wp-oop-base/`
 
 The bootstrap file will automatically detect the correct paths whether it's running as a regular plugin or must-use plugin.

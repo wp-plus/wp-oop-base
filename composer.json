@@ -1,7 +1,7 @@
 {
     "name": "wp-plus/wp-oop-base",
     "description": "Opinionated OOP base for WordPress plugin and theme development.",
-    "type": "wordpress-plugin",
+    "type": "library",
     "license": "MIT",
     "config": {
         "vendor-dir": "lib/"
