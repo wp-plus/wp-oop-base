@@ -3,7 +3,7 @@
 /**
  * Plugin Name: WP OOP Base
  * Description: Opinionated OOP base for WordPress plugin and theme development.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Author: WP+ (https://github.com/wp-plus)
  *
  * If you want to use this plugin as a must-use plugin, please move this file to the "mu-plugins" folder (only this
